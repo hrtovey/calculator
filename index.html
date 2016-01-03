@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calculator</title>
+	<!--Import Google Icon Font-->
+	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!--Import materialize.css-->
+	<link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+
+	<!--Let browser know website is optimized for mobile-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body class="">
+<div class="calculator calc-black">
+	<div class="">
+		<div class="row last-row">
+			<div class="col s12">
+				<div id="result" class="result calc-lt-black">0</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s3">
+				<button id="c" class="c waves-effect waves-light calc-clear btn-flat calc-dk-gray">C</button>
+			</div><!--
+		 --><div class="col s3">
+				<button id="plus-minus" class="plus-minus waves-effect waves-light calc-sign btn-flat calc-dk-gray">&plusmn;</button>
+			</div><!--
+		 --><div class="col s3">
+				<button id="percent" class="percent waves-effect waves-light calc-percent btn-flat calc-dk-gray">&percnt;</button>
+			</div><!--
+		 --><div class="col s3 last-col">
+				<button id="divide" class="divide waves-effect waves-light calc-function btn-flat calc-dk-gray calc-button">&divide;</button>
+			</div>
+			
+		</div>
+		<div class="row">
+			<div class="col s3">
+				<button id="7" class="7 waves-effect waves-light calc-number btn-flat calc-lt-gray">7</button>
+			</div><!--
+		 --><div class="col s3">
+				<button id="8" class="8 waves-effect waves-light calc-number btn-flat calc-lt-gray">8</button>
+			</div><!--
+		 --><div class="col s3">
+				<button id="9" class="9 waves-effect waves-light calc-number btn-flat calc-lt-gray">9</button>
+			</div><!--
+		 --><div class="col s3 last-col">
+				<button id="multiply" class="multiply waves-effect waves-light calc-function btn-flat calc-dk-gray calc-button">&Cross;</button>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s3">	
+				<button id="4" class="4 waves-effect waves-light calc-number btn-flat calc-lt-gray">4</button>
+			</div><!--
+		 --><div class="col s3">
+				<button id="5" class="5 waves-effect waves-light calc-number btn-flat calc-lt-gray">5</button>
+			</div><!--
+		 --><div class="col s3">
+				<button id="6" class="6 waves-effect waves-light calc-number btn-flat calc-lt-gray">6</button>
+			</div><!--
+		 --><div class="col s3 last-col"><button id="subtract" class="subtract waves-effect waves-light calc-function btn-flat calc-dk-gray calc-button">&minus;</button>
+			</div>	
+		</div>
+		<div class="row">
+			<div class="col s3">
+				<button id="1" class="1 waves-effect waves-light calc-number btn-flat calc-lt-gray">1</button>
+			</div><!--
+		 --><div class="col s3">
+				<button id="2" class="2 waves-effect waves-light calc-number btn-flat calc-lt-gray">2</button>
+			</div><!--
+		 --><div class="col s3">
+				<button id="3" class="3 waves-effect waves-light calc-number btn-flat calc-lt-gray">3</button>
+			</div><!--
+		 --><div class="col s3 last-col">
+				<button id="add" class="add waves-effect waves-light calc-function btn-flat calc-dk-gray calc-button">&plus;</button>
+			</div>
+		</div>
+		<div class="row last-row">
+			<div class="col s6">
+				<button id="0" class="0 waves-effect waves-light calc-number btn-flat calc-lt-gray">0</button>
+			</div><!--
+		 --><div class="col s3">
+				<button id="dot" class="dot waves-effect waves-light calc-number btn-flat calc-lt-gray calc-button">.</button>
+			</div><!--
+		 --><div class="col s3 last-col">
+				<button id="equals" class="equals waves-effect waves-light calc-function btn-flat cyan darken-1 white-text calc-button">&equals;</button>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+	<!--Import jQuery before materialize.js-->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="js/waves.js"></script>
+	<script type="text/javascript" src="js/min/calculator-min.js"></script>
+</body>
+</html>
