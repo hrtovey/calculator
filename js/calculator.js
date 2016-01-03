@@ -157,6 +157,8 @@ Calculator = {
 		// Create number from number string
 		c.currentNumber = parseFloat(c.currentNumberString);
 		// Push number into array
+        console.log(c.currentNumber);
+        console.log(typeof c.currentNumber);
         if (Number.isNaN(c.currentNumber) === false) {
             if (c.operation === '') {
                 c.calcArray = [c.currentNumber];
