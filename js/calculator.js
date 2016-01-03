@@ -173,31 +173,19 @@ Calculator = {
             var number1 = c.calcArray[0];
             var number2 = c.calcArray[1];
 
-            // get decimal length
-            var length1 = Calculator.split(number1);
-            var length2 = Calculator.split(number2);
-            var decimalPlaces;
-
-            if (length1 > length2) {
-                decimalPlaces = length1;
-            } else {
-                decimalPlaces = length2;
-            }
-
-
     		// Calculate the result
     		switch(c.operation) {
     			case 'divide':
-    				c.calculation = Calculator.round(number1 / number2, decimalPlaces);
+    				c.calculation = Calculator.round(number1 / number2);
     				break;
     			case 'multiply':
-    				c.calculation = Calculator.round(number1 * number2, decimalPlaces);
+    				c.calculation = Calculator.round(number1 * number2);
     				break;
     			case 'subtract':
-    				c.calculation = Calculator.round(number1 - number2, decimalPlaces);
+    				c.calculation = Calculator.round(number1 - number2);
     				break;
     			case 'add':
-    				c.calculation = Calculator.round(number1 + number2, decimalPlaces);
+    				c.calculation = Calculator.round(number1 + number2);
     				break;
     			default:
                     break;
@@ -245,30 +233,21 @@ Calculator = {
         }
     },
 
-	round: function(number, decimalPlaces) {
-	   return Math.round(parseFloat(number) * Math.pow(10, decimalPlaces)) / Math.pow(10, decimalPlaces);
+	round: function(number) {
+	   return Math.round(parseFloat(number) * Math.pow(10, 9)) / Math.pow(10, 9);
 	},
 
     makePercentage: function() {
 
-        var length1,
-            decimalPlaces;
-
         if (c.currentNumberString === '') {
-            // Discover decimal places
-            length1 = Calculator.split(c.calcArray[0]);
-            decimalPlaces = length1 + 2;
+
             
-            c.calcArray[0] = Calculator.round(c.calcArray[0] * 0.01, decimalPlaces);
+            c.calcArray[0] = Calculator.round(c.calcArray[0] * 0.01);
             c.result.text(Calculator.formatLength(c.calcArray[0]));
         } else {
             c.currentNumber = parseFloat(c.currentNumberString);
 
-            // Discover decimal places
-            length1 = Calculator.split(c.currentNumber);
-            decimalPlaces = length1 + 2;
-
-            c.currentNumber = Calculator.round(c.currentNumber * 0.01, decimalPlaces);
+            c.currentNumber = Calculator.round(c.currentNumber * 0.01);
             c.result.text(Calculator.formatLength(c.currentNumber));
         
             // Push number into array
