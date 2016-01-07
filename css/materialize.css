@@ -3004,3 +3004,10 @@ body {
 
   .github-corner .octo-arm {
     animation: octocat-wave 560ms ease-in-out; } }
+.footer {
+  text-align: center;
+  color: #919191;
+  padding: 0.4rem 0;
+  background: #0E0E0E;
+  font-weight: 300;
+  font-size: 14px; }
